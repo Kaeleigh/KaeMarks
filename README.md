@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## KaeMarks:
+**Rails application that allows users to bookmark URLs by email,
+ check out other users' bookmarks and keep an index of categorized bookmarks.**
 
-Things you may want to cover:
+>Wouldn't you also like the ability to share bookmarks with friends? That is not something you can do easily from your native browser.
 
-* Ruby version
+>Blocmarks will solve these problems by organizing bookmarks by topic and making them public so that other users can find them and add bookmarks to their own Blocmarks profile.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ Made with my mentor at [Bloc](http://bloc.io).
