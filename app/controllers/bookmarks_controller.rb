@@ -5,7 +5,6 @@ class BookmarksController < ApplicationController
 
   def new
     @topic = Topic.find(params[:topic_id])
-    puts params
   end
 
   def edit
@@ -40,7 +39,6 @@ class BookmarksController < ApplicationController
 
   def destroy
     @bookmark = Bookmark.find(params[:id])
-    puts params
 
     if @bookmark.destroy
       flash[:notice] = "Bookmark was deleted."
