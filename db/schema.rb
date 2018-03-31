@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180315150820) do
+ActiveRecord::Schema.define(version: 20180328231644) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.string "url"
@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(version: 20180315150820) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["topic_id"], name: "index_bookmarks_on_topic_id"
+  end
+
+  create_table "mailer_users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "login"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "topics", force: :cascade do |t|

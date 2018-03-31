@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
 
+  resources :mailer_users
+
   devise_for :users
 
   resources :topics do
     resources :bookmarks, except: [:index]
   end
 
+  post  :incoming, to: 'incoming#create'
+  
   get  'about' => 'welcome#about'
 
   root 'welcome#index'
