@@ -1,2 +1,0 @@
-class MailerUser < ApplicationRecord
-end

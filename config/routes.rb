@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-
-  resources :mailer_users
-
   devise_for :users
 
   resources :topics do
@@ -9,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   post  :incoming, to: 'incoming#create'
-  
+
   get  'about' => 'welcome#about'
 
   root 'welcome#index'
