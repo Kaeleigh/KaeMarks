@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :bookmarks, except: [:index]
   end
 
-  post  :incoming, to: 'incoming#create'
+  post :incoming, to: 'incoming#create'
 
   get  'about' => 'welcome#about'
 
