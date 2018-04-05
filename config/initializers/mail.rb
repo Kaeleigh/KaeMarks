@@ -7,10 +7,6 @@ ActionMailer::Base.smtp_settings = {
   authentication:    :plain,
   content_type:      'text/html'
 }
-ActionMailer::Base.delivery_method = :smtp
-
-# Makes debugging *way* easier.
-ActionMailer::Base.raise_delivery_errors = true
 
 # This interceptor just makes sure that local mail
 # only emails you.
