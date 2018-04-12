@@ -14,7 +14,7 @@ class TopicsController < ApplicationController
 
   def create
     @topic = Topic.new(topic_params)
-    # @topic.user = current_user
+    @topic.user = current_user
 
     if @topic.save
       flash[:notice] = "Topic created successfully!"
@@ -47,7 +47,7 @@ class TopicsController < ApplicationController
 
     if @topic.destroy
       flash[:notice] = "\"#{@topic.title}\" Topic was deleted!"
-      redirect_to topics_path
+      redirect_to action: :index
     else
       flash.now[:alert] = "An error occurred. Please try again."
       render :show
