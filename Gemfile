@@ -70,3 +70,5 @@ gem 'bootstrap-sass'
 gem 'figaro'
 # Generate seed data
 gem 'faker'
+# User Authorization
+gem 'pundit'
