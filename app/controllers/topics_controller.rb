@@ -4,8 +4,7 @@ class TopicsController < ApplicationController
   end
 
   def show
-    @topic = Topic.find(params[:id])
-    # @bookmarks = @topic.bookmarks
+    @topic = Topic.includes(bookmarks: :likes).find(params[:id])
   end
 
   def new

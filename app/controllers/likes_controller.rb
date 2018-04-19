@@ -11,7 +11,7 @@ class LikesController < ApplicationController
 
     if like.save
       flash[:notice] = "Like was saved successfully."
-      redirect_to @topic
+      redirect_to topics_path
     else
       flash.now[:alert] = "Error creating like. Please try again."
       redirect_to @topic
@@ -20,7 +20,7 @@ class LikesController < ApplicationController
 
   def destroy
     @bookmark = Bookmark.find(params[:bookmark_id])
-    @topic = Topic.find(params[:topic_id])
+    @topic = Topic.includes(bookmarks: :likes).find(params[:id])
     like = Like.find(params[:id])
 
     authorize like
