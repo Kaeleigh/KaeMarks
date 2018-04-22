@@ -23,7 +23,7 @@ class LikesController < ApplicationController
     @topic = Topic.includes(bookmarks: :likes).find(params[:id])
     like = Like.find(params[:id])
 
-    authorize like
+    # authorize like
     if like.destroy
       flash[:notice] = "Like was deleted successfully."
       redirect_to @topic
