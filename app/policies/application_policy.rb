@@ -31,7 +31,8 @@ class ApplicationPolicy
   end
 
   def destroy?
-    false
+    user.present? && (record.user == user)
+    # false
   end
 
   def scope

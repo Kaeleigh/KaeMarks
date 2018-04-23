@@ -20,13 +20,13 @@ class LikesController < ApplicationController
 
   def destroy
     @bookmark = Bookmark.find(params[:bookmark_id])
-    @topic = Topic.includes(bookmarks: :likes).find(params[:id])
+    # @topic = Topic.includes(bookmarks: :likes).find(params[:id])
     like = Like.find(params[:id])
 
-    # authorize like
+    authorize like
     if like.destroy
       flash[:notice] = "Like was deleted successfully."
-      redirect_to @topic
+      redirect_to @bookmark
     else
       flash.now[:alert] = "There was an error deleting the like."
       redirect_to @topic

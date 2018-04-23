@@ -15,9 +15,9 @@
     <% @liked_bookmarks.each do |like| %>
     <% bookmark = Bookmark.find(like.bookmark_id) %>
     <h5><%= bookmark.url %></h5>
-      <%= link_to [bookmark, like], class: 'btn btn-danger', method: :delete do %>
+      <%= link_to [@user], class: 'btn btn-danger', method: :delete do %>
       <i class="glyphicon glyphicon-star-empty"></i>&nbsp; Unlike
       <% end %>
-      <% end %>
+    <% end %>
     </div>
 </div>
